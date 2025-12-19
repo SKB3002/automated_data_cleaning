@@ -83,3 +83,40 @@ The system always produces data in this exact order:
 
 ## 📂 Project Structure
 
+├── app.py # Streamlit UI
+
+├── data_cleaner.py # Cleaning & normalization engine
+
+├── input_files/ # Raw uploaded files (optional)
+
+├── output_phase1/ # Intermediate outputs (optional)
+
+├── requirements.txt
+└── README.md
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Create virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate    # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 3.9+
+
+- Pandas
+
+- Streamlit
+
+- Regex-based normalization
+
+- Heuristic date parsing
+
