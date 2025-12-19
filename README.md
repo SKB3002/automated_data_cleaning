@@ -1,4 +1,4 @@
-# Unified Data Cleaning & Standardization Dashboard
+# 📊 Unified Data Cleaning & Standardization Dashboard
 
 A production-grade Streamlit application for **cleaning, standardizing, normalizing, and appending large-scale educational datasets** (teachers, schools, colleges, institutions) into a **single, high-quality master dataset**.
 
