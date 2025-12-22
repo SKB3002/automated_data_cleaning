@@ -22,13 +22,13 @@ COLUMN_ALIASES = {
         "contact number", "mobile/contact number"
     ],
     "Email ID": [
-        "email", "email id", "email address"
+        "email", "email id", "email address","mail"
     ],
     "School/College": [
         "name of school", "name of the school", "school",
         "school/college", "college", "institution"
     ],
-    "City/District": [
+    "City": [
         "city", "city/district", "district"
     ],
     "State": [
@@ -258,6 +258,7 @@ CITY_CORRECTIONS = {
     'Chatarpati':'Chhatrapati',
     'hubballi':'hubli',
     'sambhajinagar':'sambhaji nagar',
+    'ratlamm':'ratlam'
     
     
 }
@@ -267,7 +268,192 @@ STATE_CORRECTIONS = {
     "maharastra": "maharashtra",
     "karnatak": "karnataka",
     "andra pradesh": "andhra pradesh",
-    "tamilnadu": "tamil nadu"
+    "tamilnadu": "tamil nadu",
+    "maharashatra": "maharashtra",
+    "maharasthra": "maharashtra",
+    "maharastrha": "maharashtra",
+    "mh": "maharashtra",
+
+    # **Karnataka**
+    "karnatak": "karnataka",
+    "karnatka": "karnataka",
+    "karntaka": "karnataka",
+    "karnatka": "karnataka",
+    "karnataca": "karnataka",
+    "ka": "karnataka",
+
+    # **Andhra Pradesh**
+    "andrapradesh": "andhra pradesh",
+    "andra pradesh": "andhra pradesh",
+    "andhrapradesh": "andhra pradesh",
+    "andhrap radsh": "andhra pradesh",
+    "andhrapradeshh": "andhra pradesh",
+    "ap": "andhra pradesh",
+
+    # **Tamil Nadu**
+    "tamilnadu": "tamil nadu",
+    "tamilnadhu": "tamil nadu",
+    "tamil naduu": "tamil nadu",
+    "tamail nadu": "tamil nadu",
+    "tamill nadu": "tamil nadu",
+    "tn": "tamil nadu",
+
+    # **Uttar Pradesh**
+    "uttar pradesh": "uttar pradesh",
+    "utter pradesh": "uttar pradesh",
+    "uttar prades": "uttar pradesh",
+    "uttar pradsh": "uttar pradesh",
+    "uttr pradesh": "uttar pradesh",
+    "up": "uttar pradesh",
+
+    # **West Bengal**
+    "westbengal": "west bengal",
+    "west bengalh": "west bengal",
+    "west bengel": "west bengal",
+    "west bengla": "west bengal",
+    "wes bengal": "west bengal",
+
+    # **Rajasthan**
+    "rajasthaan": "rajasthan",
+    "rajashthan": "rajasthan",
+    "rajasthn": "rajasthan",
+    "rajasthaanh": "rajasthan",
+    "rajasthanh": "rajasthan",
+
+    # **Gujarat**
+    "gujrat": "gujarat",
+    "gujerat": "gujarat",
+    "gujarath": "gujarat",
+    "gujraat": "gujarat",
+    "gujratsh": "gujarat",
+
+    # **Bihar**
+    "biharr": "bihar",
+    "bihaar": "bihar",
+    "biharh": "bihar",
+    "biharrh": "bihar",
+
+    # **Odisha**
+    "orissa": "odisha",
+    "odishaah": "odisha",
+    "odisa": "odisha",
+    "odishaa": "odisha",
+    "odisah": "odisha",
+
+    # **Kerala**
+    "kerela": "kerala",
+    "keerala": "kerala",
+    "kerla": "kerala",
+    "kearla": "kerala",
+    "keral": "kerala",
+
+    # **Punjab**
+    "punjab": "punjab",
+    "punjabh": "punjab",
+    "punnjab": "punjab",
+    "punjabbb": "punjab",
+    "punjaab": "punjab",
+
+    # **Haryana**
+    "haryana": "haryana",
+    "haryanah": "haryana",
+    "haryanna": "haryana",
+    "harynaa": "haryana",
+
+    # **Telangana**
+    "telengana": "telangana",
+    "telenganaa": "telangana",
+    "telanganaah": "telangana",
+    "telengana state": "telangana",
+
+    # **Madhya Pradesh**
+    "madhya pradesh": "madhya pradesh",
+    "madhyapradesh": "madhya pradesh",
+    "madhya prdesh": "madhya pradesh",
+    "madhya prades": "madhya pradesh",
+
+    # **Assam**
+    "assam": "assam",
+    "asom": "assam",          # regional variant sometimes seen
+    "asam": "assam",
+    "assamm": "assam",
+
+    # **Chhattisgarh**
+    "chattisgarh": "chhattisgarh",
+    "chhattisgarhh": "chhattisgarh",
+    "chhattishgarh": "chhattisgarh",
+    "chhattisgar": "chhattisgarh",
+    "chhattigarh": "chhattisgarh",
+
+    # **Himachal Pradesh**
+    "himachal pradesh": "himachal pradesh",
+    "himachalpradesh": "himachal pradesh",
+    "himalchal pradesh": "himachal pradesh",
+    "himachal prdesh": "himachal pradesh",
+
+    # **Jharkhand**
+    "jharkhand": "jharkhand",
+    "jarkhand": "jharkhand",
+    "jharkand": "jharkhand",
+    "jharhand": "jharkhand",
+
+    # **Tripura**
+    "tripura": "tripura",
+    "tripurra": "tripura",
+    "tripuraa": "tripura",
+    "trupura": "tripura",
+
+    # **Manipur**
+    "manipur": "manipur",
+    "manippur": "manipur",
+    "manipurh": "manipur",
+
+    # **Meghalaya**
+    "meghalaya": "meghalaya",
+    "meghaalaya": "meghalaya",
+    "meghlayaa": "meghalaya",
+
+    # **Mizoram**
+    "mizoram": "mizoram",
+    "mizorammm": "mizoram",
+    "mizoaram": "mizoram",
+
+    # **Nagaland**
+    "nagaland": "nagaland",
+    "nagalandd": "nagaland",
+    "nagalandhh": "nagaland",
+
+    # **Sikkim**
+    "sikkim": "sikkim",
+    "sikkimmm": "sikkim",
+    "sikkimn": "sikkim",
+
+    # **Uttarakhand**
+    "uttrakhand": "uttarakhand",
+    "uttrakhandh": "uttarakhand",
+    "uttarkhand": "uttarakhand",
+
+    # **Goa**
+    "goa": "goa",
+    "goaa": "goa",
+    "gaoa": "goa",
+
+    # **Andaman & Nicobar (UT)**
+    "andaman nicobar": "andaman and nicobar islands",
+    "andaman & nicobar": "andaman and nicobar islands",
+    "andman nicobar": "andaman and nicobar islands"
+}
+
+VALID_STATES = {
+    "maharashtra","karnataka","andhra pradesh",
+    "tamil nadu","telangana","gujarat","rajasthan",
+    "madhya pradesh","uttar pradesh","west bengal",
+    "delhi","goa","kerala","punjab","haryana",
+    "bihar","odisha","chhattisgarh","jharkhand",
+    "assam","meghalaya","manipur","mizoram",
+    "nagaland","tripura","sikkim","arunachal pradesh",
+    "uttarakhand","himachal pradesh","jammu and kashmir",
+    "ladakh",
 }
 
 
@@ -327,7 +513,7 @@ def drop_trailing_location(s):
         "school", "college", "science", "commerce", "arts", "art",
         "vidyalaya", "shala", "vidya", "mandir", "vidyamandir",'boys','girls',
         "classes", "ashram", "dnyanpeeth", "prathmik", "mahavidyalaya",
-        "excellence"
+        "excellence","academy"
     }
 
     anchor_idx = -1
@@ -380,12 +566,24 @@ def normalize_text(val):
 
 def clean_phone(val):
     if pd.isna(val) or str(val).strip() == "":
-        return val, ""
-    num = re.sub(r"\D", "", str(val))
-    if num.startswith("91") and len(num) > 10:
-        num = num[-10:]
-    valid = "Yes" if len(num) == 10 else "No"
-    return num, valid
+        return "", "No"
+
+    s = str(val)
+
+    # Remove everything except digits
+    digits = re.sub(r"[^0-9]", "", s)
+
+    # Remove country code 91 safely
+    if digits.startswith("91") and len(digits) > 10:
+        digits = digits[-10:]
+
+    # Remove ONLY 1 or 2 leading zeros
+    digits = re.sub(r"^0{1,2}", "", digits)
+
+    valid = "Yes" if len(digits) == 10 else "No"
+    return digits, valid
+
+
 
 def clean_email(val):
     if pd.isna(val) or str(val).strip() == "":
@@ -395,12 +593,44 @@ def clean_email(val):
     valid = "Yes" if re.match(pattern, email) else "No"
     return email, valid
 
+def normalize_col(col):
+    return re.sub(r"[^a-z0-9]", " ", col.lower()).strip()
+
+
 def find_column(df_cols, aliases):
-    for col in df_cols:
-        col_lower = col.lower()
+    normalized_cols = {col: normalize_col(col) for col in df_cols}
+
+    # --------------------------------------------------
+    # 1. Exact match
+    # --------------------------------------------------
+    for col, norm in normalized_cols.items():
+        if norm in aliases:
+            return col
+
+    # --------------------------------------------------
+    # 2. Starts-with match
+    # --------------------------------------------------
+    for col, norm in normalized_cols.items():
         for alias in aliases:
-            if alias in col_lower:
+            if norm.startswith(alias + " "):
                 return col
+
+    # --------------------------------------------------
+    # 3. Whole-word match
+    # --------------------------------------------------
+    for col, norm in normalized_cols.items():
+        for alias in aliases:
+            if re.search(rf"\b{re.escape(alias)}\b", norm):
+                return col
+
+    # --------------------------------------------------
+    # 4. Substring match (LAST RESORT)
+    # --------------------------------------------------
+    for col, norm in normalized_cols.items():
+        for alias in aliases:
+            if alias in norm:
+                return col
+
     return None
 
 
@@ -446,30 +676,42 @@ def standardize_city(val, min_first_word_len=3):
     return words[0].title()
 
 
-def drop_unwanted_columns(df):
-    cols_to_drop = [
-        c for c in df.columns
-        if (
-            c is None
-            or str(c).strip() == ""
-            or str(c).lower().strip() in {"email_valid", "phone_valid"}
-        )
-    ]
-    return df.drop(columns=cols_to_drop, errors="ignore")
-
 
 def standardize_state(val):
     if pd.isna(val) or str(val).strip() == "":
-        return val
+        return ""
 
     s = str(val).lower().strip()
-    s = re.sub(r"\s+", " ", s)
 
-    # spelling correction
-    if s in STATE_CORRECTIONS:
-        s = STATE_CORRECTIONS[s]
+    # ----------------------------------
+    # 1. Normalize separators
+    # ----------------------------------
+    s = re.sub(r"[,\-/.()]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
 
-    return s.title()
+    # ----------------------------------
+    # 2. Apply spelling corrections (global)
+    # ----------------------------------
+    for wrong, correct in STATE_CORRECTIONS.items():
+        s = re.sub(rf"\b{re.escape(wrong)}\b", correct, s)
+
+    # ----------------------------------
+    # 3. Direct full-string match
+    # ----------------------------------
+    if s in VALID_STATES:
+        return s.title()
+
+    # ----------------------------------
+    # 4. Substring scan (address-safe)
+    # ----------------------------------
+    for state in VALID_STATES:
+        if re.search(rf"\b{re.escape(state)}\b", s):
+            return state.title()
+
+    # ----------------------------------
+    # 5. Nothing found → return empty
+    # ----------------------------------
+    return ""
 
 # -----------------------------
 # LOAD FILES
@@ -483,10 +725,10 @@ if not files:
 for file in files:
     try:
         df = pd.read_csv(file, encoding="utf-8") if file.suffix == ".csv" else pd.read_excel(file)
-        df = drop_unwanted_columns(df)
+        
     except UnicodeDecodeError:
         df = pd.read_csv(file, encoding="cp1252") if file.suffix == ".csv" else pd.read_excel(file)
-        df = drop_unwanted_columns(df)
+        
 
     df["__source_file"] = file.name
     dfs.append(df)
@@ -511,9 +753,9 @@ raw_df = raw_df.rename(columns=detected_cols)
 if "Name" in raw_df.columns:
     raw_df["Name"] = raw_df["Name"].apply(normalize_text)
 
-if "City/District" in raw_df.columns:
-    raw_df["City/District"] = raw_df["City/District"].apply(normalize_text)
-    raw_df["City/District"] = raw_df["City/District"].apply(standardize_city)
+if "City" in raw_df.columns:
+    raw_df["City"] = raw_df["City"].apply(normalize_text)
+    raw_df["City"] = raw_df["City"].apply(standardize_city)
 
 if "State" in raw_df.columns:
     raw_df["State"] = raw_df["State"].apply(normalize_text)
@@ -556,10 +798,10 @@ def run_cleaning_pipeline(input_files):
     for file in input_files:
         try:
             df = pd.read_csv(file, encoding="utf-8") if file.suffix == ".csv" else pd.read_excel(file)
-            df = drop_unwanted_columns(df)
+            
         except UnicodeDecodeError:
             df = pd.read_csv(file, encoding="cp1252") if file.suffix == ".csv" else pd.read_excel(file)
-            df = drop_unwanted_columns(df)
+            
 
         df["__source_file"] = file.name
         dfs.append(df)
@@ -583,9 +825,9 @@ def run_cleaning_pipeline(input_files):
     if "Name" in raw_df.columns:
         raw_df["Name"] = raw_df["Name"].apply(normalize_text)
     
-    if "City/District" in raw_df.columns:
-        raw_df["City/District"] = raw_df["City/District"].apply(normalize_text)
-        raw_df["City/District"] = raw_df["City/District"].apply(standardize_city)
+    if "City" in raw_df.columns:
+        raw_df["City"] = raw_df["City"].apply(normalize_text)
+        raw_df["City"] = raw_df["City"].apply(standardize_city)
     
     if "State" in raw_df.columns:
         raw_df["State"] = raw_df["State"].apply(normalize_text)
@@ -610,6 +852,56 @@ def run_cleaning_pipeline(input_files):
     return clean_df
 
 
+def run_cleaning_pipeline2(df):
+    """
+    input_files: list of pathlib.Path objects
+    returns: cleaned pandas DataFrame
+    """
+
+    raw_df = df.copy()
+
+    # -----------------------------
+    # COLUMN DETECTION & RENAMING
+    # -----------------------------
+    detected_cols = {}
+    for canonical, aliases in COLUMN_ALIASES.items():
+        found = find_column(raw_df.columns, aliases)
+        if found:
+            detected_cols[found] = canonical
+
+    raw_df = raw_df.rename(columns=detected_cols)
+
+    # -----------------------------
+    # CLEANING
+    # -----------------------------
+    if "Name" in raw_df.columns:
+        raw_df["Name"] = raw_df["Name"].apply(normalize_text)
+    
+    if "City" in raw_df.columns:
+        raw_df["City"] = raw_df["City"].apply(normalize_text)
+        raw_df["City"] = raw_df["City"].apply(standardize_city)
+    
+    if "State" in raw_df.columns:
+        raw_df["State"] = raw_df["State"].apply(normalize_text)
+        raw_df["State"] = raw_df["State"].apply(standardize_state)
+
+    if "School/College" in raw_df.columns:
+        raw_df["School/College"] = raw_df["School/College"].apply(standardize_school_name)
+        raw_df["School/College"] = raw_df["School/College"].apply(drop_trailing_location)
+
+    if "Phone Number" in raw_df.columns:
+        raw_df[["Phone Number", "Phone_Valid"]] = raw_df["Phone Number"].apply(
+            lambda x: pd.Series(clean_phone(x))
+        )
+
+    if "Email ID" in raw_df.columns:
+        raw_df[["Email ID", "Email_Valid"]] = raw_df["Email ID"].apply(
+            lambda x: pd.Series(clean_email(x))
+        )
+
+    clean_df = raw_df.drop_duplicates()
+
+    return clean_df
 
 
 # -----------------------------
