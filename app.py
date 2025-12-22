@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+import re
 import tempfile
-from data_cleaner import run_cleaning_pipeline   
+from data_cleaner import run_cleaning_pipeline, run_cleaning_pipeline2   
 
 st.markdown(
     """
@@ -167,6 +168,16 @@ available_cols = ["<No Column>"] + list(cleaned_df.columns)
 mapping = {}
 
 for field in REQUIRED_FIELDS:
+
+    if field == "City":
+        st.markdown(
+            "<span style='color:#8be9a7; font-size: 0.9rem;'>"
+            "If you have a combined location column (e.g., City  State), "
+            "you can map it here. The system will automatically extract city names."
+            "</span>",
+            unsafe_allow_html=True
+        )
+
     st.markdown(f"**{field}**")
 
     auto_match = None
@@ -212,22 +223,57 @@ for field in REQUIRED_FIELDS:
 def split_name(name):
     if pd.isna(name) or str(name).strip() == "":
         return "", ""
-    parts = str(name).strip().split()
+
+    s = str(name).strip()
+
+    # ----------------------------------
+    # 0. Add space after every dot
+    # ----------------------------------
+    s = re.sub(r"\.(?=\S)", ". ", s)
+
+    # ----------------------------------
+    # 1. Remove common titles / honorifics
+    # ----------------------------------
+    s = re.sub(
+        r"^(mr|mrs|mister|miss|misses|ms|sir|mam|madam|dr)\.?\s+",
+        "",
+        s,
+        flags=re.IGNORECASE
+    )
+
+    # ----------------------------------
+    # 2. Normalize spaces
+    # ----------------------------------
+    s = re.sub(r"\s+", " ", s).strip()
+
+    parts = s.split()
+    if not parts:
+        return "", ""
+
+    # ----------------------------------
+    # 3. Single word name
+    # ----------------------------------
     if len(parts) == 1:
-        return parts[0], ""
-    return parts[0], parts[-1]
+        first = re.sub(r"^[^A-Za-z]+|[^A-Za-z]+$", "", parts[0])
+        return first, ""
+
+    # ----------------------------------
+    # 4. First & Last name cleanup
+    # ----------------------------------
+    first = parts[0]
+    last = parts[-1]
+
+    # Remove trailing dot from initials (e.g., G.)
+    last = re.sub(r"\.$", "", last)
+
+    # Remove non-letter chars from front & back
+    first = re.sub(r"^[^A-Za-z]+|[^A-Za-z]+$", "", first)
+    last = re.sub(r"^[^A-Za-z]+|[^A-Za-z]+$", "", last)
+
+    return first, last
 
 
-def drop_unwanted_columns(df):
-    cols_to_drop = [
-        c for c in df.columns
-        if (
-            c is None
-            or str(c).strip() == ""
-            or str(c).lower().strip() in {"email_valid", "phone_valid"}
-        )
-    ]
-    return df.drop(columns=cols_to_drop, errors="ignore")
+
 
 
 def normalize_date(val):
@@ -346,7 +392,8 @@ if st.button("✅ Generate Final Dataset"):
         ]
     ]
 
-    final_df = final_df.drop_duplicates(subset=["Mobile Number"], keep="last")
+    final_df = final_df.drop_duplicates(keep="last")
+    final_df = run_cleaning_pipeline2(final_df)
     st.session_state["final_df"] = final_df.copy()
 
 
